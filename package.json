@@ -9,9 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "next": "14.0.4",
-    "ngrok": "^5.0.0-beta.2",
     "react": "^18",
     "react-dom": "^18"
   },
