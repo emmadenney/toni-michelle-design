@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getAllProjects } from "../../lib/api";
+import { getAllProjects } from "../lib/api";
 import { draftMode } from "next/headers";
 
 export default async function Home() {

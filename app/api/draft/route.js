@@ -1,4 +1,4 @@
-import { getProject } from "../../../../lib/api";
+import { getProject } from "../../../lib/api";
 import { draftMode } from "next/headers";
 import { redirect } from "next/navigation";
 
