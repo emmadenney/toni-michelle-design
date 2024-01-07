@@ -40,15 +40,17 @@ export default async function Project({ params }) {
               width="650"
             />
           </div>
-          <div className="space-y-8 lg:space-y-10">
-            <Image
-              alt="Project Image"
-              className="w-50 h-full"
-              height="365"
-              src={project.secondaryImage.url}
-              width="650"
-            />
-          </div>
+          {project.secondaryImage ? (
+            <div className="space-y-8 lg:space-y-10">
+              <Image
+                alt="Project Image"
+                className="w-50 h-full"
+                height="365"
+                src={project.secondaryImage.url}
+                width="650"
+              />
+            </div>
+          ) : null}
         </div>
       </section>
     </main>
