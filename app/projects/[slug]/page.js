@@ -1,4 +1,4 @@
-import { getAllProjects, getProject } from "../../../../lib/api";
+import { getAllProjects, getProject } from "../../../lib/api";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { draftMode } from "next/headers";
