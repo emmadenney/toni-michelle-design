@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { getAllProjects } from "../lib/api";
+import { getAllBookDesigns } from "../lib/api";
 import { draftMode } from "next/headers";
 
-export default async function Home() {
+export default async function HomePage() {
   const { isEnabled } = draftMode();
-  const projects = await getAllProjects(isEnabled);
+  const bookDesigns = await getAllBookDesigns(isEnabled);
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-white">
       <section className="w-full pt-12">
@@ -22,17 +22,17 @@ export default async function Home() {
           </div>
           <div className="space-y-12">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {projects.map((project: any) => (
+              {bookDesigns.map((bookDesign: any) => (
                 <div
-                  key={project.sys.id}
+                  key={bookDesign.sys.id}
                   className="h-full flex flex-col rounded-lg shadow-lg"
                 >
-                  <Link href={`/projects/${project.slug}`}>
+                  <Link href={`/book-designs/${bookDesign.slug}`}>
                     <Image
                       alt="placeholder"
                       className="w-full h-full"
                       height="400"
-                      src={project.thumbnail.url}
+                      src={bookDesign.thumbnail.url}
                       width="350"
                     />
                   </Link>
