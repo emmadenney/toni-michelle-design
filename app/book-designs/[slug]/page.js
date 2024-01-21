@@ -2,6 +2,7 @@ import { getAllBookDesigns, getBookDesign } from "../../../lib/api";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { draftMode } from "next/headers";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   const allBookDesigns = await getAllBookDesigns();
@@ -22,6 +23,11 @@ export default async function BookDesign({ params }) {
   return (
     <main className="min-h-screen p-24 bg-white">
       <section className="w-full">
+        <div className="items-start">
+          <Link href="/">
+            <p className="text-zinc-900">back</p>
+          </Link>
+        </div>
         <div className="container space-y-12 px-4 md:px-6 flex flex-col items-center justify-between">
           <div className="space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl text-zinc-900">
