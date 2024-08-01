@@ -83,14 +83,14 @@ body {
 }
 
 .book-cover-container {
-  display: inline-block; /* Adjust display as necessary */
-  padding: 150px; /* Adjust padding to match transparent border */
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  border-radius: 10px; /* Optional: to match rounded corners */
+  display: inline-block;
+  /* No padding needed if we use filter for shadow directly on the image */
 }
 
 .book-cover {
-  display: block; /* Ensure block display for images */
-  max-width: 100%; /* Adjust width */
-  height: auto; /* Maintain aspect ratio */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+  border-radius: 10px; /* Optional: to match rounded corners */
 }
