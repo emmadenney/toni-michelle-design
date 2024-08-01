@@ -39,23 +39,27 @@ export default async function BookDesign({ params }) {
           </div>
           <div className="flex flex-row items-center justify-around">
             <div className="space-y-8 lg:space-y-10">
-              <Image
-                alt="Book Design Cover"
-                className="w-50 h-full object-cover"
-                height="500"
-                src={bookDesign.featuredImage.url}
-                width="400"
-              />
+              <div className="book-cover-container">
+                <Image
+                  alt="Book Design Cover"
+                  className="book-cover"
+                  height="500"
+                  src={bookDesign.featuredImage.url}
+                  width="400"
+                />
+              </div>
             </div>
             {bookDesign.secondaryImage ? (
               <div className="space-y-8 lg:space-y-10">
-                <Image
-                  alt="Project Image"
-                  className="w-50 h-full"
-                  height="365"
-                  src={bookDesign.secondaryImage.url}
-                  width="400"
-                />
+                <div className="book-cover-container">
+                  <Image
+                    alt="Project Image"
+                    className="book-cover"
+                    height="365"
+                    src={bookDesign.secondaryImage.url}
+                    width="400"
+                  />
+                </div>
               </div>
             ) : null}
           </div>
