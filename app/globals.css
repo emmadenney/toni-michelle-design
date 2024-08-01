@@ -91,6 +91,6 @@ body {
   display: block;
   max-width: 100%;
   height: auto;
-  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
-  border-radius: 10px; /* Optional: to match rounded corners */
+  filter: drop-shadow(50px 50px 100px rgba(169, 4, 4, 0.5));
+  /* border-radius: 10px; Optional: to match rounded corners */
 }
