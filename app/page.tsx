@@ -25,13 +25,15 @@ export default async function HomePage() {
                   className="h-full flex flex-col rounded-lg shadow-lg"
                 >
                   <Link href={`/book-designs/${bookDesign.slug}`}>
-                    <Image
-                      alt="placeholder"
-                      className="w-full h-full"
-                      height="400"
-                      src={bookDesign.thumbnail.url}
-                      width="350"
-                    />
+                    <div className="book-cover-container">
+                      <Image
+                        alt="placeholder"
+                        className="book-cover"
+                        height="400"
+                        src={bookDesign.thumbnail.url}
+                        width="350"
+                      />
+                    </div>
                   </Link>
                 </div>
               ))}
