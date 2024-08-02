@@ -29,9 +29,9 @@ export default async function HomePage() {
                       <Image
                         alt="placeholder"
                         className="book-cover"
-                        height="400"
+                        height="600"
                         src={bookDesign.thumbnail.url}
-                        width="350"
+                        width="400"
                       />
                     </div>
                   </Link>
