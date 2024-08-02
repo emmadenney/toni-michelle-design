@@ -22,7 +22,7 @@ export default async function HomePage() {
               {bookDesigns.map((bookDesign: any) => (
                 <div
                   key={bookDesign.sys.id}
-                  className="h-full flex flex-col rounded-lg shadow-lg"
+                  className="h-full flex flex-col rounded-lg"
                 >
                   <Link href={`/book-designs/${bookDesign.slug}`}>
                     <div className="book-cover-container">
