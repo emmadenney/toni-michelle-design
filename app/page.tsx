@@ -12,8 +12,11 @@ export default async function HomePage() {
         <div className="mx-auto container space-y-12 px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <p className="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-xl/relaxed xl:text-xl/relaxed dark:text-zinc-400 body-font">
-                Check out my latest book design projects!
+              <p
+                className="max-w-[900px] md:text-xl/relaxed lg:text-xl/relaxed xl:text-xl/relaxed body-font"
+                style={{ color: "#6f4568" }}
+              >
+                COVER DESIGN | GRAPHICS | ILLUSTRATION | FINE ART
               </p>
             </div>
           </div>

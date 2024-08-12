@@ -4,7 +4,7 @@ import Link from "next/link";
 // import Button from "./Button";
 import Image from "next/image";
 import instagram from "../instagram.png";
-import tempLogo from "../temp-logo.png";
+import topbarLogo from "../assets/topbar-logo.png";
 import downArrow from "../caret-down.png";
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
           <div className="logo">
             <Link href="/">
               <Image
-                src={tempLogo}
+                src={topbarLogo}
                 alt="Toni Michelle Logo"
                 width="300"
                 height="400"
