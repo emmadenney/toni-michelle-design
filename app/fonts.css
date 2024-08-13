@@ -1,0 +1,123 @@
+/* Black Compressed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-black-comp-58b64117a2ad9.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Black Condensed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-black-cond-58b642507872b.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* Bold Condensed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-bold-cond-58b64162258ca.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ExtraLight Italic */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-extralight-italic-58b642045546b.otf")
+    format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Light Condensed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-light-cond-58b64220b1490.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Light Italic */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-light-italic-58b6417957e5.otf")
+    format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Regular Compressed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-regular-comp-58b641cc0aca1.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Regular Italic */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-regular-italic-58b641ecad88f.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Thin Italic */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-thin-italic-58b641b2d5a92.otf")
+    format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* UltraBlack Compressed */
+@font-face {
+  font-family: "Interstate";
+  src: url("/fonts/interstate/interstate-ultrablack-comp-58b64130a8cbf.otf")
+    format("opentype");
+  font-weight: 950;
+  font-style: normal;
+}
+
+/* Nimbus Roman No9 L Regular */
+@font-face {
+  font-family: "NimbusRomanNo9L";
+  src: url("/fonts/nimbus-roman-no9l/NimbusRomNo9L-Reg.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Nimbus Roman No9 L Regular Italic */
+@font-face {
+  font-family: "NimbusRomanNo9L";
+  src: url("/fonts/nimbus-roman-no9l/NimbusRomNo9L-RegIta.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Nimbus Roman No9 L Medium */
+@font-face {
+  font-family: "NimbusRomanNo9L";
+  src: url("/fonts/nimbus-roman-no9l/NimbusRomNo9L-Med.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Nimbus Roman No9 L Medium Italic */
+@font-face {
+  font-family: "NimbusRomanNo9L";
+  src: url("/fonts/nimbus-roman-no9l/NimbusRomNo9L-MedIta.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
