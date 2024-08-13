@@ -6,7 +6,7 @@ import Image from "next/image";
 import instagram from "../instagram.png";
 import topbarLogo from "../assets/topbar-logo.png";
 import downArrow from "../caret-down.png";
-
+//
 const Navbar = () => {
   return (
     <>
