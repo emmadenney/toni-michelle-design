@@ -40,10 +40,11 @@ body {
 }
 
 main {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: #ffffff;
-  padding: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,8 +54,8 @@ main {
 .cover-text-container {
   width: 100%;
   max-width: 100%;
-  height: 300px;
-  padding: 20px;
+  height: 150px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
 }
@@ -73,9 +74,6 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Start with 3 equal columns */
   justify-content: center; /* Center the grid columns */
-  padding-top: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
   width: 100%;
   max-width: 100%;
   margin: 0 auto; /* Center the container itself */
@@ -90,7 +88,6 @@ main {
   justify-content: center; /* Center horizontally */
   max-width: 100%; /* Ensure items don't exceed their container */
   transition: transform 0.3s ease; /* Smooth resizing */
-  padding: 10px; /* Optional: Add padding around the book content */
 }
 
 @media (max-width: 1024px) {
@@ -107,7 +104,8 @@ main {
 
 .book-cover-container {
   display: inline-block;
-  max-width: 300px;
+  max-width: 500px;
+  min-width: 400px;
   /* No padding needed if we use filter for shadow directly on the image */
 }
 

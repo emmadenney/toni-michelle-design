@@ -16,17 +16,17 @@ export default async function HomePage() {
       <div className="book-list-container">
         {bookDesigns.map((bookDesign: any) => (
           <div key={bookDesign.sys.id} className="book-list-item">
-            <Link href={`/book-designs/${bookDesign.slug}`}>
-              <div className="book-cover-container">
-                <Image
-                  alt="placeholder"
-                  className="book-cover"
-                  height="600"
-                  src={bookDesign.thumbnail.url}
-                  width="400"
-                />
-              </div>
-            </Link>
+            {/* <Link href={`/book-designs/${bookDesign.slug}`}> */}
+            <div className="book-cover-container">
+              <Image
+                alt="placeholder"
+                className="book-cover"
+                height="600"
+                src={bookDesign.thumbnail.url}
+                width="400"
+              />
+            </div>
+            {/* </Link> */}
           </div>
         ))}
       </div>
