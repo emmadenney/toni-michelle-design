@@ -3,16 +3,43 @@ import Link from "next/link";
 // import Logo from "./Logo";
 // import Button from "./Button";
 import Image from "next/image";
-import instagram from "../instagram.png";
 import topbarLogo from "../assets/topbar-logo.png";
-import downArrow from "../caret-down.png";
+import insta from "../assets/sm-insta-lt-prple.png";
+import linkedin from "../assets/sm-linkedin-lt-prple.png";
+import mail from "../assets/sm-mail-lt-prple.png";
 
 const Navbar = () => {
   return (
     <>
-      <div className="w-full h-36 bg-white sticky top-0 border-custom">
-        <div className="container mx-auto px-4 h-full">
-          <div className="logo">
+      <div className="header">
+        <div className="social-media-list-container">
+          <div className="social-media-item">
+            <a target="_blank" href="https://www.instagram.com/tmdesign_">
+              <Image src={insta} alt="instagram" width="35" height="35"></Image>
+            </a>
+          </div>
+          <div className="social-media-item">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/toni-campbell-69a94a321"
+            >
+              <Image
+                src={linkedin}
+                alt="linked in"
+                width="35"
+                height="35"
+              ></Image>
+            </a>
+          </div>
+          <div className="social-media-item">
+            <a href="mailto:tmichelledesign@outlook.com">
+              <Image src={mail} alt="email" width="35" height="35"></Image>
+            </a>
+          </div>
+        </div>
+
+        <div className="header-logo-container">
+          <div className="header-logo">
             <Link href="/">
               <Image
                 src={topbarLogo}
@@ -22,42 +49,30 @@ const Navbar = () => {
               ></Image>
             </Link>
           </div>
-          <div className="flex justify-between items-center h-full">
-            <div className="mb-8 mt-auto">
-              <Link href="https://www.instagram.com/tmichelleart/">
-                <Image
-                  src={instagram}
-                  alt="instagram"
-                  width="35"
-                  height="35"
-                ></Image>
-              </Link>
-            </div>
-
-            <ul className="hidden md:flex gap-x-9 text-black main-font ml-auto mb-8 mt-auto tracking-wide">
-              <li>
-                <Link href="/about">
-                  <p>ABOUT</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/about">
-                  <p>CONTACT</p>
-                </Link>
-              </li>
-              <li className="dropdown">
-                <Link href="/" className="dropbtn">
-                  WORK
-                </Link>
-                <div className="dropdown-content">
-                  <a href="/other">Paintings</a>
-                  <a href="#">Sketches</a>
-                  <a href="#">Other Designs</a>
-                </div>
-              </li>
-            </ul>
-          </div>
         </div>
+
+        <ul className="menu main-font">
+          <li className="menu-item">
+            <Link href="/about">
+              <p>ABOUT</p>
+            </Link>
+          </li>
+          <li className="menu-item">
+            <Link href="/about">
+              <p>CONTACT</p>
+            </Link>
+          </li>
+          <li className="menu-item">
+            <Link href="/" className="dropbtn">
+              WORK
+            </Link>
+            <div className="dropdown-content">
+              <a href="/other">Paintings</a>
+              <a href="#">Sketches</a>
+              <a href="#">Other Designs</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </>
   );

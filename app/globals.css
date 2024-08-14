@@ -39,11 +39,63 @@ body {
   font-family: "NimbusRomanNo9L", serif;
 }
 
+.header {
+  width: 100%;
+  max-width: 100%;
+  height: 175px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  border-bottom: 10px solid #6f4568;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+.social-media-list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 30px;
+}
+
+.social-media-item {
+  max-height: 40px;
+  max-width: 40px;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  max-height: 100%;
+  width: 150px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 30px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  color: #2e203f;
+}
+
 main {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-color: #ffffff;
-  padding: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,8 +105,8 @@ main {
 .cover-text-container {
   width: 100%;
   max-width: 100%;
-  height: 300px;
-  padding: 20px;
+  height: 150px;
+  margin-top: 25px;
   display: flex;
   align-items: center;
 }
@@ -73,9 +125,6 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Start with 3 equal columns */
   justify-content: center; /* Center the grid columns */
-  padding-top: 15px;
-  padding-left: 50px;
-  padding-right: 50px;
   width: 100%;
   max-width: 100%;
   margin: 0 auto; /* Center the container itself */
@@ -90,7 +139,6 @@ main {
   justify-content: center; /* Center horizontally */
   max-width: 100%; /* Ensure items don't exceed their container */
   transition: transform 0.3s ease; /* Smooth resizing */
-  padding: 10px; /* Optional: Add padding around the book content */
 }
 
 @media (max-width: 1024px) {
@@ -107,7 +155,8 @@ main {
 
 .book-cover-container {
   display: inline-block;
-  max-width: 300px;
+  max-width: 500px;
+  min-width: 400px;
   /* No padding needed if we use filter for shadow directly on the image */
 }
 
