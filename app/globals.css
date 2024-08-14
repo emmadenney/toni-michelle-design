@@ -39,6 +39,57 @@ body {
   font-family: "NimbusRomanNo9L", serif;
 }
 
+.header {
+  width: 100%;
+  max-width: 100%;
+  height: 175px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  border-bottom: 10px solid #6f4568;
+  padding-left: 85px;
+  padding-right: 85px;
+}
+
+.social-media-list-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 30px;
+}
+
+.social-media-item {
+  max-height: 40px;
+  max-width: 40px;
+}
+
+.header-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo {
+  max-height: 100%;
+  width: 150px;
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 30px;
+  padding-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-item {
+  color: #2e203f;
+}
+
 main {
   height: 100%;
   width: 100vw;
