@@ -16,6 +16,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -247,23 +251,22 @@ main {
 }
 
 .about-image-container {
-  width: 100%;
-  height: 100%;
   max-width: 450px;
-  min-width: 250px;
-  min-height: 500px;
   border: 7px solid #6f4568;
   border-radius: 20px;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 .about-image-container img {
-  height: 100%;
   width: 100%;
-  max-width: 450px;
-  min-height: 500px;
+  height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .about-summary {
@@ -274,7 +277,33 @@ main {
   letter-spacing: 3px;
 }
 
+/* Media query for tablets and below */
 @media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Switch to column layout on smaller screens */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+    gap: 40px; /* Reduce the gap between elements */
+  }
+  .about-container {
+    max-width: 90vw; /* Increase the width of the text container */
+  }
+  .about-image-container {
+    max-width: 80%; /* Make the image container narrower */
+    height: auto;
+  }
+}
+
+/* Media query for very small screens (mobile devices) */
+@media (max-width: 480px) {
+  .about-container {
+    max-width: 100%; /* Allow the text container to use full width */
+  }
+
+  .about-image-container {
+    max-width: 100%; /* Allow the image to use full width */
+    height: auto;
+  }
 }
 
 .testimonial-container {
