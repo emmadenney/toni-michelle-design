@@ -1,11 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
 import { getAllBookDesigns } from "../lib/api";
 import { draftMode } from "next/headers";
+import book1 from "./assets/1.png";
+import book2 from "./assets/2.png";
+import book3 from "./assets/3.png";
 
 export default async function HomePage() {
   const { isEnabled } = draftMode();
   const bookDesigns = await getAllBookDesigns(isEnabled);
+  // const bookDesigns = [book1, book2, book3];
   return (
     <main>
       <div className="cover-text-container">
@@ -32,4 +35,40 @@ export default async function HomePage() {
       </div>
     </main>
   );
+}
+
+{
+  /* <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book1}
+              width="400"
+            />
+          </div>
+        </div>
+        <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book2}
+              width="400"
+            />
+          </div>
+        </div>
+        <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book3}
+              width="400"
+            />
+          </div>
+        </div> */
 }
