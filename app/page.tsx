@@ -1,11 +1,19 @@
 import Image from "next/image";
-import Link from "next/link";
-import { getAllBookDesigns } from "../lib/api";
+import { getProject } from "../lib/api";
 import { draftMode } from "next/headers";
 
 export default async function HomePage() {
   const { isEnabled } = draftMode();
-  const bookDesigns = await getAllBookDesigns(isEnabled);
+  // const bookDesigns = await getAllBookDesigns(isEnabled);
+
+  const project = await getProject("books", isEnabled);
+
+  if (!project) {
+    return <p>No project found</p>;
+  }
+
+  const { projectsCollection } = project;
+
   return (
     <main>
       <div className="cover-text-container">
@@ -14,12 +22,12 @@ export default async function HomePage() {
         </p>
       </div>
       <div className="book-list-container">
-        {bookDesigns.map((bookDesign: any) => (
+        {projectsCollection.items.map((bookDesign: any) => (
           <div key={bookDesign.sys.id} className="book-list-item">
             {/* <Link href={`/book-designs/${bookDesign.slug}`}> */}
             <div className="book-cover-container">
               <Image
-                alt="placeholder"
+                alt={bookDesign.title}
                 className="book-cover"
                 height="600"
                 src={bookDesign.thumbnail.url}
@@ -32,4 +40,40 @@ export default async function HomePage() {
       </div>
     </main>
   );
+}
+
+{
+  /* <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book1}
+              width="400"
+            />
+          </div>
+        </div>
+        <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book2}
+              width="400"
+            />
+          </div>
+        </div>
+        <div className="book-list-item">
+          <div className="book-cover-container">
+            <Image
+              alt="placeholder"
+              className="book-cover"
+              height="600"
+              src={book3}
+              width="400"
+            />
+          </div>
+        </div> */
 }

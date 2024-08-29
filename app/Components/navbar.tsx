@@ -7,6 +7,7 @@ import topbarLogo from "../assets/topbar-logo.png";
 import insta from "../assets/sm-insta-lt-prple.png";
 import linkedin from "../assets/sm-linkedin-lt-prple.png";
 import mail from "../assets/sm-mail-lt-prple.png";
+import dropdown from "../assets/dropdown-prple.png";
 
 const Navbar = () => {
   return (
@@ -66,6 +67,12 @@ const Navbar = () => {
             <Link href="/" className="dropbtn">
               WORK
             </Link>
+            <Image
+              src={dropdown}
+              alt="dropdown arrow"
+              width="40"
+              height="40"
+            ></Image>
             <div className="dropdown-content">
               <a href="/other">Paintings</a>
               <a href="#">Sketches</a>
