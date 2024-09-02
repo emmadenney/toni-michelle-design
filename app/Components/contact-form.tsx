@@ -1,5 +1,9 @@
 export default async function ContactForm() {
-  // const submitFormHandler = () => {};
+  const submitFormHandler = (event: any) => {
+    event.preventDefault();
+    // send email to tmichelle
+  };
+
   return (
     <form className="contact-form">
       <div className="contact-form-item main-font">
@@ -14,12 +18,14 @@ export default async function ContactForm() {
         <label htmlFor="message">Message</label>
         <textarea name="message"></textarea>
       </div>
-      <button
-        // onClick={submitFormHandler}
-        className="contact-form-submit-btn"
-      >
-        Submit
-      </button>
+      <div className="button-container">
+        <button
+          // onClick={submitFormHandler}
+          className="contact-form-submit-btn main-font"
+        >
+          SUBMIT
+        </button>
+      </div>
     </form>
   );
 }

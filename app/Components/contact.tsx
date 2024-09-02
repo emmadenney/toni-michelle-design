@@ -2,7 +2,6 @@ import { getContactDetails } from "../../lib/api";
 
 export default async function Contact() {
   const contactDetails = await getContactDetails();
-  console.log(contactDetails);
 
   return (
     <>

@@ -11,11 +11,9 @@ import quoteCloseLp from "../assets/quote-close-lp.png";
 
 export default async function AboutPage() {
   const about = await getAbout();
-  console.log(about);
-  console.log("bio: ", documentToReactComponents(about.bio.json));
 
   return (
-    <main>
+    <main id="top-of-page">
       <div className="about-section">
         <div className="about-container">
           <div className="about-heading main-font">TONI MICHELLE</div>
