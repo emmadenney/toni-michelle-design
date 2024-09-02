@@ -1,7 +1,5 @@
 import React from "react";
 import Link from "next/link";
-// import Logo from "./Logo";
-// import Button from "./Button";
 import Image from "next/image";
 import topbarLogo from "../assets/topbar-logo.png";
 import insta from "../assets/sm-insta-lt-prple.png";
@@ -12,7 +10,7 @@ import dropdown from "../assets/dropdown-prple.png";
 const Navbar = () => {
   return (
     <>
-      <div className="header">
+      <div className="header" id="top-of-page">
         <div className="social-media-list-container">
           <div className="social-media-item">
             <a target="_blank" href="https://www.instagram.com/tmdesign_">

@@ -15,7 +15,7 @@ export default async function HomePage() {
   const { projectsCollection } = project;
 
   return (
-    <main>
+    <main id="top-of-page">
       <div className="cover-text-container">
         <p className="cover-text main-font">
           COVER DESIGN | GRAPHICS | ILLUSTRATION | FINE ART
@@ -40,40 +40,4 @@ export default async function HomePage() {
       </div>
     </main>
   );
-}
-
-{
-  /* <div className="book-list-item">
-          <div className="book-cover-container">
-            <Image
-              alt="placeholder"
-              className="book-cover"
-              height="600"
-              src={book1}
-              width="400"
-            />
-          </div>
-        </div>
-        <div className="book-list-item">
-          <div className="book-cover-container">
-            <Image
-              alt="placeholder"
-              className="book-cover"
-              height="600"
-              src={book2}
-              width="400"
-            />
-          </div>
-        </div>
-        <div className="book-list-item">
-          <div className="book-cover-container">
-            <Image
-              alt="placeholder"
-              className="book-cover"
-              height="600"
-              src={book3}
-              width="400"
-            />
-          </div>
-        </div> */
 }
