@@ -51,7 +51,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  border-bottom: 10px solid #6f4568;
+  border-bottom: 8px solid #6f4568;
   padding-left: 85px;
   padding-right: 85px;
 }
@@ -289,7 +289,7 @@ main {
   text-align: left;
   letter-spacing: 0.5px;
   color: #2e203f;
-  font-weight: 550;
+  font-weight: 500;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -299,7 +299,7 @@ main {
 .about-image-container {
   max-width: 450px;
   border: 6px solid #6f4568;
-  border-radius: 15px;
+  border-radius: 10px;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -378,7 +378,7 @@ main {
 }
 
 .testimonial-quote img {
-  height: 50px;
+  height: 48px;
   width: auto;
 }
 

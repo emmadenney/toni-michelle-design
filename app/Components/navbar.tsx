@@ -63,7 +63,7 @@ const Navbar = () => {
           </li>
           <li className="menu-item">
             <Link href="/" className="dropbtn">
-              WORK
+              PORTFOLIO
             </Link>
             <Image
               src={dropdown}
