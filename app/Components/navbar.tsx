@@ -78,6 +78,14 @@ const Navbar = () => {
             </div>
           </li>
         </ul>
+        <div className="menu-dropdown">
+          <Image
+            src={dropdown}
+            alt="dropdown arrow"
+            width="60"
+            height="60"
+          ></Image>
+        </div>
       </div>
     </>
   );
