@@ -33,7 +33,7 @@ const Footer = () => {
             <div className="social-media-item">
               <a
                 target="_blank"
-                href="https://www.linkedin.com/in/toni-campbell-69a94a321"
+                href="https://www.linkedin.com/in/toni-michelle-design/"
               >
                 <Image
                   src={linkedinGrey}
@@ -44,14 +44,14 @@ const Footer = () => {
               </a>
             </div>
             <div className="social-media-item">
-              <a href="mailto:tmichelledesign@outlook.com">
+              <Link href="/about#contact-section">
                 <Image
                   src={mailGrey}
                   alt="email"
                   width="35"
                   height="35"
                 ></Image>
-              </a>
+              </Link>
             </div>
             <div className="social-media-item">
               <Link href="#top-of-page">
