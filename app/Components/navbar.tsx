@@ -6,6 +6,7 @@ import insta from "../assets/sm-insta-lt-prple.png";
 import linkedin from "../assets/sm-linkedin-lt-prple.png";
 import mail from "../assets/sm-mail-lt-prple.png";
 import dropdown from "../assets/dropdown-prple.png";
+import hamburger from "../assets/hamburger-menu-lp.png";
 
 const Navbar = () => {
   return (
@@ -38,16 +39,14 @@ const Navbar = () => {
         </div>
 
         <div className="header-logo-container">
-          <div className="header-logo">
-            <Link href="/">
-              <Image
-                src={topbarLogo}
-                alt="Toni Michelle Logo"
-                width="300"
-                height="400"
-              ></Image>
-            </Link>
-          </div>
+          <Link className="header-logo" href="/">
+            <Image
+              src={topbarLogo}
+              alt="Toni Michelle Logo"
+              width="300"
+              height="400"
+            ></Image>
+          </Link>
         </div>
 
         <ul className="menu main-font">
@@ -67,7 +66,7 @@ const Navbar = () => {
             </Link>
             <Image
               src={dropdown}
-              alt="dropdown arrow"
+              alt="portfolio menu"
               width="40"
               height="40"
             ></Image>
@@ -78,13 +77,8 @@ const Navbar = () => {
             </div>
           </li>
         </ul>
-        <div className="menu-dropdown">
-          <Image
-            src={dropdown}
-            alt="dropdown arrow"
-            width="60"
-            height="60"
-          ></Image>
+        <div className="hamburger-menu-icon">
+          <Image src={hamburger} alt="menu" width="60" height="60"></Image>
         </div>
       </div>
     </>
