@@ -5,6 +5,7 @@ import mailGrey from "../assets/sm-mail-grey.png";
 import arrowUpGrey from "../assets/arrow-up-grey.png";
 import Link from "next/link";
 import footerLogo from "../assets/footer-logo.png";
+import footerRespLogo from "../assets/tm-logo-grey.png";
 
 const Footer = () => {
   return (
@@ -12,7 +13,15 @@ const Footer = () => {
       <div className="footer background-purple">
         <div className="footer-left-container">
           <Image
+            id="footer-logo"
             src={footerLogo}
+            alt="Toni Michelle Design logo"
+            height="100"
+            width="200"
+          ></Image>
+          <Image
+            id="footer-resp-logo"
+            src={footerRespLogo}
             alt="Toni Michelle Design logo"
             height="100"
             width="200"
@@ -65,7 +74,8 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-copyright main-font">
-            ©2024 by Toni Michelle Design. Website created by Emma Denney
+            ©2024 by Toni Michelle Design. <br id="footer-copyright-break" />
+            Website created by Emma Denney
           </div>
         </div>
       </div>

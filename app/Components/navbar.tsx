@@ -7,6 +7,7 @@ import linkedin from "../assets/sm-linkedin-lt-prple.png";
 import mail from "../assets/sm-mail-lt-prple.png";
 import dropdown from "../assets/dropdown-prple.png";
 import hamburger from "../assets/hamburger-menu-lp.png";
+import topbarRespLogo from "../assets/tm-logo-lp.png";
 
 const Navbar = () => {
   return (
@@ -41,7 +42,15 @@ const Navbar = () => {
         <div className="header-logo-container">
           <Link className="header-logo" href="/">
             <Image
+              id="header-logo"
               src={topbarLogo}
+              alt="Toni Michelle Logo"
+              width="300"
+              height="400"
+            ></Image>
+            <Image
+              id="header-resp-logo"
+              src={topbarRespLogo}
               alt="Toni Michelle Logo"
               width="300"
               height="400"
