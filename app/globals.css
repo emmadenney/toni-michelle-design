@@ -100,7 +100,7 @@ body {
   padding-bottom: 18px;
   font-weight: 600;
   letter-spacing: 1px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 
 .menu-item {
@@ -116,7 +116,7 @@ body {
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 30px;
-  padding-right: 15px;
+  /* padding-right: 15px; */
 }
 
 .hamburger-menu-icon img {
