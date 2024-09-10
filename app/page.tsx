@@ -18,7 +18,9 @@ export default async function HomePage() {
     <main id="top-of-page">
       <div className="cover-text-container">
         <p className="cover-text main-font">
-          COVER DESIGN | GRAPHICS | ILLUSTRATION | FINE ART
+          COVER DESIGN | <br id="cover-text-break-1" />
+          GRAPHICS | <br id="cover-text-break-2" />
+          ILLUSTRATION | FINE ART
         </p>
       </div>
       <div className="book-list-container">
