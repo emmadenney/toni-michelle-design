@@ -115,7 +115,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="menu-item">
-            <Link href="/" className="dropbtn">
+            <Link href="/other" className="dropbtn">
               PORTFOLIO
             </Link>
             <Image
