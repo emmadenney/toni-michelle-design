@@ -122,6 +122,7 @@ body {
 .hamburger-menu-icon img {
   height: 30px;
   width: auto;
+  cursor: pointer;
 }
 
 .footer {
@@ -297,6 +298,33 @@ main {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 160px;
+  right: 50px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 175px;
+  z-index: 1000;
+  padding: 10px;
+}
+
+.dropdown-menu-item {
+  padding: 15px;
+}
+
+.dropdown-menu-item p {
+  margin: 0;
+  color: #2e203f;
+}
+
+.dropdown-menu-item p:hover {
+  color: #977191;
 }
 
 .logo {
@@ -622,16 +650,21 @@ main {
     display: none;
   }
   .header {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-between; */
+    /* align-items: flex-end; */
+    grid-template-columns: repeat(2, 1fr);
     padding-left: 24px;
     padding-right: 24px;
   }
   .header-logo-container {
-    padding-bottom: 0;
-    padding-top: 8px;
+    padding-bottom: 8px;
+    /* padding-top: 8px; */
+    justify-content: flex-start;
+  }
+  .hamburger-menu-icon {
+    padding-right: 15px;
   }
   #header-logo {
     display: none;
@@ -652,6 +685,9 @@ main {
   .footer {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .dropdown-menu {
+    right: 25px;
   }
 }
 

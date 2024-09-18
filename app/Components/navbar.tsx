@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import topbarLogo from "../assets/topbar-logo.png";
@@ -10,6 +12,49 @@ import hamburger from "../assets/hamburger-menu-lp.png";
 import topbarRespLogo from "../assets/tm-logo-lp.png";
 
 const Navbar = () => {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
+  const hamburgerRef = useRef<HTMLDivElement | null>(null);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node) &&
+      hamburgerRef.current && // Ensure the click isn't on the hamburger icon
+      !hamburgerRef.current.contains(event.target as Node)
+    ) {
+      setDropdownVisible(false);
+    }
+  };
+
+  const handleResize = () => {
+    if (window.innerWidth > 1070) {
+      setDropdownVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    // Add event listener to close dropdown when clicking outside
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Add resize event listener to hide dropdown on larger screens
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listeners on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <div className="header" id="top-of-page">
@@ -86,9 +131,35 @@ const Navbar = () => {
             </div>
           </li>
         </ul>
-        <div className="hamburger-menu-icon">
+        <div
+          className="hamburger-menu-icon"
+          onClick={toggleDropdown}
+          ref={hamburgerRef}
+        >
           <Image src={hamburger} alt="menu" width="60" height="60"></Image>
         </div>
+
+        {isDropdownVisible && (
+          <div ref={dropdownRef}>
+            <ul className="dropdown-menu main-font">
+              <li className="dropdown-menu-item">
+                <Link href="/about" onClick={closeDropdown}>
+                  <p>ABOUT</p>
+                </Link>
+              </li>
+              <li className="dropdown-menu-item">
+                <Link href="/about/#contact-section" onClick={closeDropdown}>
+                  <p>CONTACT</p>
+                </Link>
+              </li>
+              <li className="dropdown-menu-item">
+                <Link href="/other" onClick={closeDropdown}>
+                  <p>PORTFOLIO</p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </>
   );
