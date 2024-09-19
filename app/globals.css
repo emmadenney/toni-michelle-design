@@ -260,6 +260,7 @@ main {
   display: inline-block;
   max-width: 300px;
   min-width: 200px;
+  cursor: pointer;
   /* No padding needed if we use filter for shadow directly on the image */
 }
 
@@ -572,6 +573,65 @@ main {
   background: #2e203f;
 }
 
+/* Modal overlay background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Dark background */
+  backdrop-filter: blur(5px); /* Blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background: white;
+  padding: 20px 50px;
+  border-radius: 4px;
+  position: relative;
+  width: 75vw;
+  max-width: 90%;
+  height: 90vh;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Close button */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6f4568;
+}
+
+/* Book cover image in modal */
+.modal-book-cover {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Maintain the aspect ratio */
+  filter: drop-shadow(9px 9px 10px rgba(0, 0, 0, 0.2));
+}
+
+/* Darken the background when the modal is open */
+.book-list-container {
+  transition: filter 0.3s;
+}
+
+.book-list-container.modal-open {
+  filter: blur(5px) brightness(0.5); /* Apply blur and darken effect */
+}
+
 @media (max-width: 1365px) {
   .book-list-container {
     gap: 50px;
@@ -688,6 +748,9 @@ main {
   }
   .dropdown-menu {
     right: 25px;
+  }
+  .modal-content {
+    height: unset;
   }
 }
 

@@ -1,11 +1,9 @@
-import Image from "next/image";
 import { getProject } from "../lib/api";
 import { draftMode } from "next/headers";
+import BookList from "./Components/book-list";
 
 export default async function HomePage() {
   const { isEnabled } = draftMode();
-  // const bookDesigns = await getAllBookDesigns(isEnabled);
-
   const project = await getProject("books", isEnabled);
 
   if (!project) {
@@ -23,23 +21,7 @@ export default async function HomePage() {
           ILLUSTRATION | FINE ART
         </p>
       </div>
-      <div className="book-list-container">
-        {projectsCollection.items.map((bookDesign: any) => (
-          <div key={bookDesign.sys.id} className="book-list-item">
-            {/* <Link href={`/book-designs/${bookDesign.slug}`}> */}
-            <div className="book-cover-container">
-              <Image
-                alt={bookDesign.title}
-                className="book-cover"
-                height="600"
-                src={bookDesign.thumbnail.url}
-                width="400"
-              />
-            </div>
-            {/* </Link> */}
-          </div>
-        ))}
-      </div>
+      <BookList bookDesigns={projectsCollection.items} />
     </main>
   );
 }
