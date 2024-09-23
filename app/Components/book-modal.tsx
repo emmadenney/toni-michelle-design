@@ -1,7 +1,14 @@
 import React from "react";
 import Image from "next/image";
 
-const Modal = ({ isOpen, onClose, bookCoverUrl, bookTitle }) => {
+interface ModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  bookCoverUrl: string;
+  bookTitle: string;
+}
+
+const Modal = ({ isOpen, onClose, bookCoverUrl, bookTitle }: ModalProps) => {
   if (!isOpen) return null; // Return null if modal is not open
 
   return (
