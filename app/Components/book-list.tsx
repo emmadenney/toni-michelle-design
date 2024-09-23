@@ -4,11 +4,25 @@ import { useState } from "react";
 import Image from "next/image";
 import Modal from "./book-modal";
 
-const BookList = ({ bookDesigns }) => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [selectedBook, setSelectedBook] = useState(null);
+interface BookDesign {
+  title: string;
+  slug: string;
+  description: string;
+  thumbnail: { url: string };
+  featuredImage: { url: string };
+  secondaryImage: { url: string };
+  sys: { id: string };
+}
 
-  const openModal = (book: any) => {
+interface BookListProps {
+  bookDesigns: BookDesign[];
+}
+
+const BookList = ({ bookDesigns }: BookListProps) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [selectedBook, setSelectedBook] = useState<BookDesign | null>(null);
+
+  const openModal = (book: BookDesign) => {
     setSelectedBook(book);
     setModalOpen(true);
   };
@@ -20,7 +34,7 @@ const BookList = ({ bookDesigns }) => {
 
   return (
     <div className="book-list-container">
-      {bookDesigns.map((bookDesign: any) => (
+      {bookDesigns.map((bookDesign: BookDesign) => (
         <div
           key={bookDesign.sys.id}
           className="book-list-item"
