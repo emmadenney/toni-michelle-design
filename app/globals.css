@@ -111,6 +111,10 @@ body {
   height: 40px;
 }
 
+.portfolio-menu-icon {
+  cursor: pointer;
+}
+
 .hamburger-menu-icon {
   display: none;
   justify-content: flex-end;
