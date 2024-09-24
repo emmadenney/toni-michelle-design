@@ -359,6 +359,7 @@ main {
   gap: 12px;
 }
 
+.illustrations-heading,
 .about-heading {
   font-size: 36px;
   color: #2e203f;
@@ -504,6 +505,7 @@ main {
   margin-top: 100px;
 }
 
+.portfolio-heading,
 .contact-heading {
   font-size: 36px;
   color: #2e203f;
@@ -634,6 +636,20 @@ main {
 
 .book-list-container.modal-open {
   filter: blur(5px) brightness(0.5); /* Apply blur and darken effect */
+}
+
+.portfolio-heading-container {
+  width: 100%;
+  height: auto;
+  padding: 50px;
+}
+
+.illustrations-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px;
 }
 
 @media (max-width: 1365px) {

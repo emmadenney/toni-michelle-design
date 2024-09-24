@@ -15,8 +15,9 @@ export default async function ContactForm() {
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form-item main-font">
-        <label htmlFor="name">Name</label>
+        <label htmlFor="contact-form-name">Name</label>
         <input
+          id="contact-form-name"
           name="name"
           type="text"
           value={name}
@@ -26,8 +27,9 @@ export default async function ContactForm() {
         ></input>
       </div>
       <div className="contact-form-item">
-        <label htmlFor="email">Email</label>
+        <label htmlFor="contact-form-email">Email</label>
         <input
+          id="contact-form-email"
           name="email"
           type="text"
           value={email}
@@ -37,8 +39,9 @@ export default async function ContactForm() {
         ></input>
       </div>
       <div className="contact-form-item">
-        <label htmlFor="message">Message</label>
+        <label htmlFor="contact-form-message">Message</label>
         <textarea
+          id="contact-form-message"
           name="message"
           value={message}
           onChange={(e) => {
