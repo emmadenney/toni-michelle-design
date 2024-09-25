@@ -17,8 +17,7 @@ export default async function HomePage() {
       <div className="cover-text-container">
         <p className="cover-text main-font">
           COVER DESIGN | <br id="cover-text-break-1" />
-          GRAPHICS | <br id="cover-text-break-2" />
-          ILLUSTRATION | FINE ART
+          GRAPHICS <br id="cover-text-break-2" />| ILLUSTRATION | FINE ART
         </p>
       </div>
       <BookList bookDesigns={projectsCollection.items} />

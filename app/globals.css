@@ -111,8 +111,18 @@ body {
   height: 40px;
 }
 
+.spacer {
+  margin-right: 2px;
+}
+
 .portfolio-menu-icon {
   cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.portfolio-menu-icon img {
+  height: 40px !important;
+  width: 40px !important;
 }
 
 .hamburger-menu-icon {
@@ -246,18 +256,6 @@ main {
   max-width: 100%; /* Ensure items don't exceed their container */
   transition: transform 0.3s ease; /* Smooth resizing */
   margin-bottom: 50px;
-}
-
-@media (max-width: 1024px) {
-  .book-list-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .book-list-container {
-    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
-  }
 }
 
 .book-cover-container {
@@ -405,35 +403,6 @@ main {
   font-size: 20px;
   font-weight: 550;
   letter-spacing: 3px;
-}
-
-/* Media query for tablets and below */
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column; /* Switch to column layout on smaller screens */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center text content */
-    gap: 40px; /* Reduce the gap between elements */
-  }
-  .about-container {
-    max-width: 90vw; /* Increase the width of the text container */
-  }
-  .about-image-container {
-    max-width: 80%; /* Make the image container narrower */
-    height: auto;
-  }
-}
-
-/* Media query for very small screens (mobile devices) */
-@media (max-width: 480px) {
-  .about-container {
-    max-width: 100%; /* Allow the text container to use full width */
-  }
-
-  .about-image-container {
-    max-width: 100%; /* Allow the image to use full width */
-    height: auto;
-  }
 }
 
 .testimonial-container {
@@ -675,6 +644,9 @@ main {
   #cover-text-break-2 {
     display: block;
   }
+  .cover-text-container {
+    padding: 60px;
+  }
 }
 
 @media (max-width: 1070px) {
@@ -689,6 +661,12 @@ main {
   }
   #footer-resp-logo {
     display: block;
+  }
+}
+
+@media (max-width: 1024px) {
+  .book-list-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
   }
 }
 
@@ -711,6 +689,22 @@ main {
     text-align: right;
     font-size: 10px;
   }
+  .about-section {
+    flex-direction: column; /* Switch to column layout on smaller screens */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text content */
+    gap: 40px; /* Reduce the gap between elements */
+  }
+  .about-container {
+    max-width: 90vw; /* Increase the width of the text container */
+  }
+  .about-image-container {
+    max-width: 80%; /* Make the image container narrower */
+    height: auto;
+  }
+  .book-list-container {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 674px) {
@@ -719,9 +713,6 @@ main {
   }
   .cover-text {
     font-size: 20px;
-  }
-  #cover-text-break-1 {
-    display: block;
   }
 }
 
@@ -737,14 +728,20 @@ main {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 24px;
     padding-right: 24px;
+    height: 15vh;
   }
   .header-logo-container {
     padding-bottom: 8px;
     /* padding-top: 8px; */
     justify-content: flex-start;
+    height: 15vh;
   }
   .hamburger-menu-icon {
-    padding-right: 15px;
+    padding-right: 5px;
+    height: 15vh;
+  }
+  .hamburger-menu-icon img {
+    height: 20px;
   }
   #header-logo {
     display: none;
@@ -753,14 +750,18 @@ main {
     display: block;
   }
   .cover-text-container {
-    margin-top: 24px;
-    padding: 30px;
+    margin-top: 12px;
+    padding: 25px;
   }
   .cover-text {
-    font-size: 18px;
+    font-size: 14px;
+    letter-spacing: 6px;
   }
   .book-list-container {
-    margin-top: 24px;
+    margin-top: 8px;
+  }
+  .book-cover-container {
+    min-width: unset;
   }
   .footer {
     padding-left: 40px;
@@ -774,8 +775,45 @@ main {
   }
 }
 
-@media (max-width: 380px) {
-  #cover-text-break-1 {
-    display: none;
+@media (max-width: 480px) {
+  .about-container {
+    max-width: 100%; /* Allow the text container to use full width */
+  }
+
+  .about-image-container {
+    max-width: 100%; /* Allow the image to use full width */
+    height: auto;
+  }
+}
+
+@media (max-width: 381px) {
+  .cover-text {
+    letter-spacing: 4px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 333px) {
+  .cover-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 306px) {
+  .cover-text {
+    letter-spacing: 3px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 283px) {
+  .cover-text {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 269px) {
+  .cover-text {
+    letter-spacing: 2px;
   }
 }
