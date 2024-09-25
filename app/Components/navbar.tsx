@@ -128,7 +128,7 @@ const Navbar = () => {
         </div>
 
         <ul className="menu main-font">
-          <li className="menu-item">
+          <li className="menu-item spacer">
             <Link href="/about">
               <p>ABOUT</p>
             </Link>
