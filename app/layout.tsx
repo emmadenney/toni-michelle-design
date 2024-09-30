@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Toni Michelle Design",
@@ -17,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
+      </head>
+      <body>
         <Navbar />
         {children}
         <Footer />
