@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" type="image/png" href="/favicon.png" />
-      </Head>
+      <head>
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+      </head>
       <body>
         <Navbar />
         {children}
