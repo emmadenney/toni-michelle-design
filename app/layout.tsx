@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
 import "./globals.css";
@@ -14,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="icon" type="image/png" href="/favicon.png" />
-      </head>
+      </Head>
       <body>
         <Navbar />
         {children}
