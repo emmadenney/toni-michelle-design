@@ -6,9 +6,31 @@ export default async function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("");
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setStatus("Email sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Error sending email.");
+      }
+    } catch (error) {
+      console.error(error);
+      setStatus("Error sending email.");
+    }
   };
 
   return (
@@ -49,7 +71,7 @@ export default async function ContactForm() {
         ></textarea>
       </div>
       <div className="button-container">
-        <button type="button" className="contact-form-submit-btn main-font">
+        <button type="submit" className="contact-form-submit-btn main-font">
           SUBMIT
         </button>
       </div>
