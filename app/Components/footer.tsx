@@ -62,7 +62,7 @@ const Footer = () => {
                 ></Image>
               </Link>
             </div>
-            <div className="social-media-item">
+            <div className="social-media-item arrow-up">
               <Link href="#top-of-page">
                 <Image
                   src={arrowUpGrey}

@@ -7,7 +7,7 @@ import topbarLogo from "../assets/topbar-logo.png";
 import insta from "../assets/sm-insta-lt-prple.png";
 import linkedin from "../assets/sm-linkedin-lt-prple.png";
 import mail from "../assets/sm-mail-lt-prple.png";
-import dropdown from "../assets/dropdown-prple.png";
+import dropdown from "../assets/dropdown-lprple.png";
 import hamburger from "../assets/hamburger-menu-lp.png";
 import topbarRespLogo from "../assets/tm-logo-lp.png";
 
