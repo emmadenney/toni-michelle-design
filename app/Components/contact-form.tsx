@@ -2,21 +2,33 @@
 
 import { useState } from "react";
 
-export default async function ContactForm() {
+export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     setStatus("Sending...");
+    const formData = {
+      name,
+      email,
+      message,
+    };
+    sendEmail(formData);
+  };
 
+  const sendEmail = async (formData: {
+    name: string;
+    email: string;
+    message: string;
+  }) => {
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -28,22 +40,23 @@ export default async function ContactForm() {
 
       if (res.ok) {
         setStatus("Email sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("Error sending email.");
       }
     } catch (error) {
-      console.error(error);
       setStatus("Error sending email.");
     }
   };
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <div className="contact-form-item main-font">
-        <label htmlFor="contact-form-name">Name</label>
+      <div className="contact-form-item">
+        <label htmlFor="contact-form-name" className="main-font">
+          Name
+        </label>
         <input
           id="contact-form-name"
+          className="main-font"
           name="name"
           type="text"
           value={name}
@@ -53,9 +66,12 @@ export default async function ContactForm() {
         ></input>
       </div>
       <div className="contact-form-item">
-        <label htmlFor="contact-form-email">Email</label>
+        <label htmlFor="contact-form-email" className="main-font">
+          Email
+        </label>
         <input
           id="contact-form-email"
+          className="main-font"
           name="email"
           type="text"
           value={email}
@@ -65,9 +81,12 @@ export default async function ContactForm() {
         ></input>
       </div>
       <div className="contact-form-item">
-        <label htmlFor="contact-form-message">Message</label>
+        <label htmlFor="contact-form-message" className="main-font">
+          Message
+        </label>
         <textarea
           id="contact-form-message"
+          className="main-font"
           name="message"
           value={message}
           onChange={(e) => {
@@ -80,6 +99,15 @@ export default async function ContactForm() {
           SUBMIT
         </button>
       </div>
+      <p
+        className={
+          status
+            ? "status-message main-font"
+            : "status-message-hidden main-font"
+        }
+      >
+        {status}
+      </p>
     </form>
   );
 }
