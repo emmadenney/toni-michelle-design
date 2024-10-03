@@ -19,7 +19,6 @@ export default async function BookDesign({ params }) {
   if (!bookDesign) {
     notFound();
   }
-  console.log("BOOK DESIGN", bookDesign);
   return (
     <main className="min-h-screen p-24 bg-white">
       <section className="w-full">
