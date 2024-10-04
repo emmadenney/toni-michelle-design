@@ -10,8 +10,8 @@ export async function POST(req) {
     port: 465,
     secure: true, // true for port 465, false for other ports
     auth: {
-      user: "contact@tonimichelledesign.com",
-      pass: "P6dKmnmJBtPY",
+      user: process.env.ZOHO_USER,
+      pass: process.env.ZOHO_PASS,
     },
   });
 
