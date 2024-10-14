@@ -48,7 +48,7 @@ export default async function BookDesign({ params }) {
                 />
               </div>
             </div>
-            {bookDesign.secondaryImage ? (
+            {bookDesign.secondaryImage && (
               <div className="space-y-8 lg:space-y-10">
                 <div className="book-cover-container">
                   <Image
@@ -60,7 +60,7 @@ export default async function BookDesign({ params }) {
                   />
                 </div>
               </div>
-            ) : null}
+            )}
           </div>
         </div>
       </section>

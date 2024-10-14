@@ -7,11 +7,6 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -99,15 +94,7 @@ export default function ContactForm() {
           SUBMIT
         </button>
       </div>
-      <p
-        className={
-          status
-            ? "status-message main-font"
-            : "status-message-hidden main-font"
-        }
-      >
-        {status}
-      </p>
+      {status && <p className="status-message main-font">{status}</p>}
     </form>
   );
 }
