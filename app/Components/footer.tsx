@@ -23,8 +23,8 @@ const Footer = () => {
             id="footer-resp-logo"
             src={footerRespLogo}
             alt="Toni Michelle Design logo"
-            height="100"
-            width="200"
+            height="200"
+            width="100"
           ></Image>
         </div>
         <div className="footer-right-container">

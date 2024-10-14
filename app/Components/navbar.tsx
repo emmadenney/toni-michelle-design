@@ -66,11 +66,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Add event listener to close dropdown when clicking outside
-    document.addEventListener("mousedown", handleClickOutside);
-
-    // Add resize event listener to hide dropdown on larger screens
-    window.addEventListener("resize", handleResize);
+    if (typeof window !== "undefined") {
+      // Add event listener to close dropdown when clicking outside
+      document.addEventListener("mousedown", handleClickOutside);
+      // Add resize event listener to hide dropdown on larger screens
+      window.addEventListener("resize", handleResize);
+    }
 
     // Clean up event listeners on component unmount
     return () => {
@@ -139,7 +140,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="menu-item">
-            <Link href="/other" className="dropbtn">
+            <Link href="/portfolio" className="dropbtn">
               PORTFOLIO
             </Link>
             <div
@@ -168,12 +169,12 @@ const Navbar = () => {
           <div ref={portfolioDropdownRef}>
             <ul className="dropdown-menu main-font">
               <li className="dropdown-menu-item">
-                <Link href="/other" onClick={closePortfolioDropdown}>
+                <Link href="/portfolio" onClick={closePortfolioDropdown}>
                   <p>ILLUSTRATIONS</p>
                 </Link>
               </li>
               <li className="dropdown-menu-item">
-                <Link href="/other" onClick={closePortfolioDropdown}>
+                <Link href="/portfolio" onClick={closePortfolioDropdown}>
                   <p>FINE ART</p>
                 </Link>
               </li>
@@ -203,7 +204,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="dropdown-menu-item">
-                <Link href="/other" onClick={closeHamburgerDropdown}>
+                <Link href="/portfolio" onClick={closeHamburgerDropdown}>
                   <p>PORTFOLIO</p>
                 </Link>
               </li>

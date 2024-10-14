@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-interface Illustration {
+interface GraphicDesign {
   title: string;
   slug: string;
   description: string;
@@ -12,25 +12,25 @@ interface Illustration {
   sys: { id: string };
 }
 
-interface IllustrationsProps {
-  illustrations: Illustration[];
+interface GraphicDesignsProps {
+  graphicDesigns: GraphicDesign[];
 }
 
-const IllustrationsList = ({ illustrations }: IllustrationsProps) => {
+const GraphicDesignsList = ({ graphicDesigns }: GraphicDesignsProps) => {
   return (
     <div className="illustrations-list-container">
-      {illustrations.map((illustration: Illustration) => (
+      {graphicDesigns.map((graphicDesign: GraphicDesign) => (
         <div
-          key={illustration.sys.id}
+          key={graphicDesign.sys.id}
           className="illustration-list-item"
           // onClick={() => openModal(bookDesign)}
         >
           <div className="illustration-container">
             <Image
-              alt={illustration.title}
+              alt={graphicDesign.title}
               className="illustration"
               height="600"
-              src={illustration.featuredImage.url}
+              src={graphicDesign.featuredImage.url}
               width="400"
             />
           </div>
@@ -50,4 +50,4 @@ const IllustrationsList = ({ illustrations }: IllustrationsProps) => {
   );
 };
 
-export default IllustrationsList;
+export default GraphicDesignsList;
