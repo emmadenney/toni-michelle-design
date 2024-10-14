@@ -5,6 +5,7 @@ import FineArtList from "@/Components/fine-art-list";
 import GraphicDesignsList from "@/Components/graphic-designs-list";
 
 export default async function Portfolio() {
+  console.log("Portfolio page");
   const { isEnabled } = draftMode();
   const illustrationsProject = await getProject("illustrations", isEnabled);
   const fineArtProject = await getProject("fine-art", isEnabled);
