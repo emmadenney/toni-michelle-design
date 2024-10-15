@@ -6,13 +6,11 @@ export default async function HomePage() {
   const { isEnabled } = draftMode();
   const project = await getProject("books", isEnabled);
 
-  console.log("books: ", project);
-
-  // if (!project) {
-  //   return <p>No project found</p>;
-  // }
-
   const { projectsCollection } = project;
+
+  if (projectsCollection.items.length == 0) {
+    return <p>No projects found</p>;
+  }
 
   return (
     <main id="top-of-page">
