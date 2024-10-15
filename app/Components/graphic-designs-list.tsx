@@ -18,17 +18,17 @@ interface GraphicDesignsProps {
 
 const GraphicDesignsList = ({ graphicDesigns }: GraphicDesignsProps) => {
   return (
-    <div className="illustrations-list-container">
+    <div className="graphic-designs-list-container">
       {graphicDesigns.map((graphicDesign: GraphicDesign) => (
         <div
           key={graphicDesign.sys.id}
-          className="illustration-list-item"
+          className="graphic-design-list-item"
           // onClick={() => openModal(bookDesign)}
         >
-          <div className="illustration-container">
+          <div className="graphic-design-container">
             <Image
               alt={graphicDesign.title}
-              className="illustration"
+              className="graphic-design"
               height="600"
               src={graphicDesign.featuredImage.url}
               width="400"
