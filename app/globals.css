@@ -656,6 +656,62 @@ main {
   justify-content: flex-start;
   align-items: center;
   padding: 50px;
+  width: 100%;
+}
+
+.illustrations-container {
+  margin-top: 50px;
+}
+
+.illustration-list-item {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  max-width: 100%; /* Ensure items don't exceed their container */
+  transition: transform 0.3s ease; /* Smooth resizing */
+}
+
+.illustration-container {
+  display: inline-block;
+  max-width: 300px;
+  width: 300px;
+  min-width: 200px;
+  cursor: pointer;
+}
+
+.illustration {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* filter: drop-shadow(9px 9px 10px rgba(0, 0, 0, 0.2)); */
+  /* border-radius: 10px; Optional: to match rounded corners */
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-image-container img {
+  height: 500px;
+  width: auto;
+}
+
+.carousel-control {
+  background-color: #6f4568;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 1365px) {
