@@ -1,11 +1,14 @@
 import { getProject } from "../../lib/api";
 import { draftMode } from "next/headers";
-import IllustrationsList from "@/Components/illustrations-list";
-import FineArtList from "@/Components/fine-art-list";
-import GraphicDesignsList from "@/Components/graphic-designs-list";
+// import IllustrationsList from "@/Components/illustrations-list";
+// import FineArtList from "@/Components/fine-art-list";
+// import GraphicDesignsList from "@/Components/graphic-designs-list";
+import ImageCarousel from "@/Components/image-carousel";
+import { useEffect } from "react";
 
 export default async function Portfolio() {
   const { isEnabled } = draftMode();
+
   const illustrationsProject = await getProject("illustrations", isEnabled);
   const fineArtProject = await getProject("fine-art", isEnabled);
   const graphicDesignsProject = await getProject("graphic-designs", isEnabled);
@@ -21,9 +24,16 @@ export default async function Portfolio() {
         {illustrationsCollection.items.length == 0 ? (
           <p>No projects found</p>
         ) : (
-          <div className="illustrations-container">
-            <IllustrationsList illustrations={illustrationsCollection.items} />
-          </div>
+          <ImageCarousel projects={illustrationsCollection.items} />
+        )}
+      </div>
+      ;
+      <div className="graphic-design-section">
+        <div className="graphic-design-heading main-font">GRAPHIC DESIGN</div>
+        {graphicDesignsCollection.items.length == 0 ? (
+          <p>No projects found</p>
+        ) : (
+          <ImageCarousel projects={graphicDesignsCollection.items} />
         )}
       </div>
       <div className="fine-art-section">
@@ -31,22 +41,7 @@ export default async function Portfolio() {
         {fineArtCollection.items.length == 0 ? (
           <p>No projects found</p>
         ) : (
-          <div className="fine-art-container">
-            {" "}
-            <FineArtList fineArt={fineArtCollection.items} />
-          </div>
-        )}
-      </div>
-      <div className="graphic-design-section">
-        <div className="graphic-design-heading main-font">GRAPHIC DESIGN</div>
-        {graphicDesignsCollection.items.length == 0 ? (
-          <p>No projects found</p>
-        ) : (
-          <div className="graphic-design-container">
-            <GraphicDesignsList
-              graphicDesigns={graphicDesignsCollection.items}
-            />
-          </div>
+          <ImageCarousel projects={fineArtCollection.items} />
         )}
       </div>
     </main>

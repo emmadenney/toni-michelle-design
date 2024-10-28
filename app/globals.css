@@ -363,6 +363,8 @@ main {
   gap: 12px;
 }
 
+.graphic-design-heading,
+.fine-art-heading,
 .illustrations-heading,
 .about-heading {
   font-size: 36px;
@@ -650,6 +652,8 @@ main {
   padding: 50px;
 }
 
+.graphic-design-section,
+.fine-art-section,
 .illustrations-section {
   display: flex;
   flex-direction: column;
@@ -659,35 +663,10 @@ main {
   width: 100%;
 }
 
-.illustrations-container {
+/* .carousel {
   margin-top: 50px;
-}
-
-.illustration-list-item {
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  max-width: 100%; /* Ensure items don't exceed their container */
-  transition: transform 0.3s ease; /* Smooth resizing */
-}
-
-.illustration-container {
-  display: inline-block;
-  max-width: 300px;
-  width: 300px;
-  min-width: 200px;
-  cursor: pointer;
-}
-
-.illustration {
-  display: block;
+  width: 100%;
   max-width: 100%;
-  height: auto;
-  /* filter: drop-shadow(9px 9px 10px rgba(0, 0, 0, 0.2)); */
-  /* border-radius: 10px; Optional: to match rounded corners */
-}
-
-.carousel {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -698,20 +677,21 @@ main {
   padding: 30px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   gap: 30px;
   height: 100%;
   width: 100%;
 }
 
 .carousel-image-container img {
-  height: 500px;
+  height: 300px;
   width: auto;
-}
+} */
 
-.carousel-control {
-  background-color: #6f4568;
+.carousel-arrow {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 @media (max-width: 1365px) {
