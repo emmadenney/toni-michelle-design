@@ -6,6 +6,8 @@ import Image from "next/image";
 import ArrowLeft from "../assets/arrow-left.png";
 import ArrowRight from "../assets/arrow-right.png";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface Project {
   title: string;
@@ -55,8 +57,26 @@ const ImageCarousel = ({ projects }: CarouselProps) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    initialSlide: 0,
+    className: "slider-inner-div",
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -65,7 +85,7 @@ const ImageCarousel = ({ projects }: CarouselProps) => {
         {projects.map((project, index) => (
           <div key={index}>
             <img
-              className="thumbnail"
+              className="slider-thumbnail"
               src={project.featuredImage.url}
               alt={project.title}
             />
@@ -74,93 +94,6 @@ const ImageCarousel = ({ projects }: CarouselProps) => {
       </Slider>
     </div>
   );
-
-  // const [firstSlideIndex, setFirstSlideIndex] = useState(0);
-  // const [secondSlideIndex, setSecondSlideIndex] = useState(1);
-  // const [thirdSlideIndex, setThirdSlideIndex] = useState(2);
-  // const totalProjects = projects.length;
-  // // Go to the previous slide
-  // const goToPrevious = () => {
-  //   setFirstSlideIndex(
-  //     (prevIndex) => (prevIndex - 1 + totalProjects) % totalProjects
-  //   );
-  //   setSecondSlideIndex(
-  //     (prevIndex) => (prevIndex - 1 + totalProjects) % totalProjects
-  //   );
-  //   setThirdSlideIndex(
-  //     (prevIndex) => (prevIndex - 1 + totalProjects) % totalProjects
-  //   );
-  // };
-  // // Go to the next slide
-  // const goToNext = () => {
-  //   setFirstSlideIndex((prevIndex) => (prevIndex + 1) % totalProjects);
-  //   setSecondSlideIndex((prevIndex) => (prevIndex + 1) % totalProjects);
-  //   setThirdSlideIndex((prevIndex) => (prevIndex + 1) % totalProjects);
-  // };
-  // return (
-  //   <>
-  //     <div className="carousel">
-  //       <Image
-  //         className="carousel-arrow"
-  //         src={ArrowLeft}
-  //         alt="Previous Arrow"
-  //         width={30}
-  //         height={30}
-  //         onClick={goToPrevious}
-  //       ></Image>
-  //       <div className="carousel-image-container">
-  //         <Image
-  //           src={projects[firstSlideIndex].featuredImage.url}
-  //           width={200}
-  //           height={350}
-  //           alt={projects[firstSlideIndex].title}
-  //         ></Image>
-  //         {projects[secondSlideIndex] && (
-  //           <Image
-  //             src={projects[secondSlideIndex].featuredImage.url}
-  //             width={200}
-  //             height={350}
-  //             alt={projects[secondSlideIndex].title}
-  //           ></Image>
-  //         )}
-  //         {projects[thirdSlideIndex] && (
-  //           <Image
-  //             src={projects[thirdSlideIndex].featuredImage.url}
-  //             width={200}
-  //             height={350}
-  //             alt={projects[thirdSlideIndex].title}
-  //           ></Image>
-  //         )}
-  //       </div>
-  //       <Image
-  //         className="carousel-arrow"
-  //         src={ArrowRight}
-  //         alt="Next Arrow"
-  //         width={30}
-  //         height={30}
-  //         onClick={goToNext}
-  //       ></Image>
-  //     </div>
-  //   </>
-  // );
-  // return (
-  //   <div className="image-carousel">
-  //     <Swiper
-  //       modules={[Navigation]}
-  //       slidesPerView={3}
-  //       spaceBetween={30}
-  //       navigation
-  //       loop={true} // Optional: makes the carousel loop infinitely
-  //       className="carousel"
-  //     >
-  //       {projects.map((project, index) => (
-  //         <SwiperSlide key={index}>
-  //           <img src={project.featuredImage.url} alt={project.title} />
-  //         </SwiperSlide>
-  //       ))}
-  //     </Swiper>
-  //   </div>
-  // );
 };
 
 export default ImageCarousel;

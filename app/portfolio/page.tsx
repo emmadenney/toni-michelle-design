@@ -18,9 +18,9 @@ export default async function Portfolio() {
   const graphicDesignsCollection = graphicDesignsProject.projectsCollection;
 
   return (
-    <main id="top-of-page">
-      <div className="illustrations-section">
-        <div className="illustrations-heading main-font">ILLUSTRATIONS</div>
+    <main id="top-of-page" className="portfolio-page">
+      <div className="portfolio-section">
+        <div className="portfolio-heading main-font">ILLUSTRATIONS</div>
         {illustrationsCollection.items.length == 0 ? (
           <p>No projects found</p>
         ) : (
@@ -28,16 +28,16 @@ export default async function Portfolio() {
         )}
       </div>
       ;
-      <div className="graphic-design-section">
-        <div className="graphic-design-heading main-font">GRAPHIC DESIGN</div>
+      <div className="portfolio-section">
+        <div className="portfolio-heading main-font">GRAPHIC DESIGN</div>
         {graphicDesignsCollection.items.length == 0 ? (
           <p>No projects found</p>
         ) : (
           <ImageCarousel projects={graphicDesignsCollection.items} />
         )}
       </div>
-      <div className="fine-art-section">
-        <div className="fine-art-heading main-font">FINE ART</div>
+      <div className="portfolio-section">
+        <div className="portfolio-heading main-font">FINE ART</div>
         {fineArtCollection.items.length == 0 ? (
           <p>No projects found</p>
         ) : (

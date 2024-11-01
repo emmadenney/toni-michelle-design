@@ -363,9 +363,6 @@ main {
   gap: 12px;
 }
 
-.graphic-design-heading,
-.fine-art-heading,
-.illustrations-heading,
 .about-heading {
   font-size: 36px;
   color: #2e203f;
@@ -482,7 +479,6 @@ main {
   margin-top: 100px;
 }
 
-.portfolio-heading,
 .contact-heading {
   font-size: 36px;
   color: #2e203f;
@@ -646,47 +642,49 @@ main {
   filter: blur(5px) brightness(0.5); /* Apply blur and darken effect */
 }
 
-.portfolio-heading-container {
-  width: 100%;
-  height: auto;
-  padding: 50px;
-}
-
-.graphic-design-section,
-.fine-art-section,
-.illustrations-section {
+.portfolio-page {
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+}
+
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
   padding: 50px;
   width: 100%;
+  padding-bottom: 0;
 }
 
-/* .carousel {
-  margin-top: 50px;
+.portfolio-heading {
+  font-size: 36px;
+  color: #2e203f;
+  letter-spacing: 6px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.slider-container {
+  padding: 50px;
   width: 100%;
   max-width: 100%;
+}
+
+.slider-inner-div {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.carousel-image-container {
-  padding: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 30px;
-  height: 100%;
-  width: 100%;
-}
-
-.carousel-image-container img {
-  height: 300px;
+.slider-thumbnail {
+  height: 500px;
   width: auto;
-} */
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  padding: 12px;
+}
 
 .carousel-arrow {
   width: 30px;
@@ -846,6 +844,18 @@ main {
   .modal-content {
     height: unset;
   }
+  .portfolio-heading {
+    font-size: 28px;
+  }
+  .slider-thumbnail {
+    height: 400px;
+  }
+  .portfolio-section {
+    padding: 25px;
+  }
+  .slider-container {
+    padding: 25px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -857,12 +867,22 @@ main {
     max-width: 100%; /* Allow the image to use full width */
     height: auto;
   }
+
+  .portfolio-section {
+    padding: 12px;
+  }
 }
 
 @media (max-width: 381px) {
   .cover-text {
     letter-spacing: 4px;
     line-height: 30px;
+  }
+  .portfolio-heading {
+    font-size: 20px;
+  }
+  .slider-thumbnail {
+    height: 350px;
   }
 }
 
