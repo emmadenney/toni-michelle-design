@@ -8,7 +8,7 @@ import { useEffect } from "react";
 
 export default async function Portfolio() {
   const { isEnabled } = draftMode();
-
+  //
   const illustrationsProject = await getProject("illustrations", isEnabled);
   const fineArtProject = await getProject("fine-art", isEnabled);
   const graphicDesignsProject = await getProject("graphic-designs", isEnabled);
