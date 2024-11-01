@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ImageCarousel from "./image-carousel";
 
 interface GraphicDesign {
   title: string;
@@ -19,23 +20,7 @@ interface GraphicDesignsProps {
 const GraphicDesignsList = ({ graphicDesigns }: GraphicDesignsProps) => {
   return (
     <div className="graphic-designs-list-container">
-      {graphicDesigns.map((graphicDesign: GraphicDesign) => (
-        <div
-          key={graphicDesign.sys.id}
-          className="graphic-design-list-item"
-          // onClick={() => openModal(bookDesign)}
-        >
-          <div className="graphic-design-container">
-            <Image
-              alt={graphicDesign.title}
-              className="graphic-design"
-              height="600"
-              src={graphicDesign.featuredImage.url}
-              width="400"
-            />
-          </div>
-        </div>
-      ))}
+      <ImageCarousel projects={graphicDesigns} />
 
       {/* Modal Component */}
       {/* {selectedBook && (

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ImageCarousel from "./image-carousel";
 
 interface FineArtDesign {
   title: string;
@@ -19,23 +20,7 @@ interface FineArtProps {
 const FineArtList = ({ fineArt }: FineArtProps) => {
   return (
     <div className="fine-art-list-container">
-      {fineArt.map((fineArtDesign: FineArtDesign) => (
-        <div
-          key={fineArtDesign.sys.id}
-          className="fine-art-list-item"
-          // onClick={() => openModal(bookDesign)}
-        >
-          <div className="fine-art-container">
-            <Image
-              alt={fineArtDesign.title}
-              className="fine-art"
-              height="600"
-              src={fineArtDesign.featuredImage.url}
-              width="400"
-            />
-          </div>
-        </div>
-      ))}
+      <ImageCarousel projects={fineArt} />
 
       {/* Modal Component */}
       {/* {selectedBook && (

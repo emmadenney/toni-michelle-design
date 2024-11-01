@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import ImageCarousel from "./image-carousel";
 
 interface Illustration {
   title: string;
@@ -19,23 +20,7 @@ interface IllustrationsProps {
 const IllustrationsList = ({ illustrations }: IllustrationsProps) => {
   return (
     <div className="illustrations-list-container">
-      {illustrations.map((illustration: Illustration) => (
-        <div
-          key={illustration.sys.id}
-          className="illustration-list-item"
-          // onClick={() => openModal(bookDesign)}
-        >
-          <div className="illustration-container">
-            <Image
-              alt={illustration.title}
-              className="illustration"
-              height="600"
-              src={illustration.featuredImage.url}
-              width="400"
-            />
-          </div>
-        </div>
-      ))}
+      <ImageCarousel projects={illustrations} />
 
       {/* Modal Component */}
       {/* {selectedBook && (
