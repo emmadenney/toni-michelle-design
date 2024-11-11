@@ -10,6 +10,7 @@ import mail from "../assets/sm-mail-lt-prple.png";
 import dropdown from "../assets/dropdown-lprple.png";
 import hamburger from "../assets/hamburger-menu-lp.png";
 import topbarRespLogo from "../assets/tm-logo-lp.png";
+import Arrow from "../assets/arrow-right-purple.png";
 
 const Navbar = () => {
   const [isHamburgerDropdownVisible, setHamburgerDropdownVisible] =
@@ -169,18 +170,68 @@ const Navbar = () => {
           <div ref={portfolioDropdownRef}>
             <ul className="dropdown-menu main-font">
               <li className="dropdown-menu-item">
-                <Link href="/portfolio" onClick={closePortfolioDropdown}>
-                  <p>ILLUSTRATIONS</p>
+                <Link
+                  href="/portfolio/#illustrations"
+                  onClick={closePortfolioDropdown}
+                >
+                  <div className="item">
+                    <p>ILLUSTRATIONS</p>
+                    <Image
+                      className={`carousel-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
                 </Link>
               </li>
               <li className="dropdown-menu-item">
-                <Link href="/portfolio" onClick={closePortfolioDropdown}>
-                  <p>FINE ART</p>
+                <Link
+                  href="/portfolio/#fine-art"
+                  onClick={closePortfolioDropdown}
+                >
+                  <div className="item">
+                    <p>FINE ART</p>
+                    <Image
+                      className={`carousel-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
+                </Link>
+              </li>
+              <li className="dropdown-menu-item">
+                <Link
+                  href="/portfolio/#graphic-designs"
+                  onClick={closePortfolioDropdown}
+                >
+                  <div className="item">
+                    <p>GRAPHIC DESIGNS</p>
+                    <Image
+                      className={`carousel-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
                 </Link>
               </li>
               <li className="dropdown-menu-item">
                 <Link href="/" onClick={closePortfolioDropdown}>
-                  <p>BOOK DESIGNS</p>
+                  <div className="item">
+                    <p>COVER DESIGN</p>
+                    <Image
+                      className={`carousel-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
                 </Link>
               </li>
             </ul>
@@ -196,10 +247,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="dropdown-menu-item">
-                <Link
-                  href="/about/#contact-section"
-                  onClick={closeHamburgerDropdown}
-                >
+                <Link href="/about/#contact" onClick={closeHamburgerDropdown}>
                   <p>CONTACT</p>
                 </Link>
               </li>

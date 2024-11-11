@@ -53,7 +53,7 @@ export default async function AboutPage() {
           {about.testimonial1.author}
         </div>
       </div>
-      <div className="contact-section" id="contact-section">
+      <div className="contact-section" id="contact">
         <Contact />
         <ContactForm />
       </div>
