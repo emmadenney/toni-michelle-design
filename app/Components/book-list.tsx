@@ -1,16 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
-import Modal from "./book-modal";
+import { useState, useEffect } from "react";
+// import Image from "next/image";
+import Modal from "./modal";
 
 interface BookDesign {
   title: string;
   slug: string;
   description: string;
-  thumbnail: { url: string };
   featuredImage: { url: string };
-  secondaryImage: { url: string };
+  galleryCollection: any;
   sys: { id: string };
 }
 
@@ -23,8 +22,12 @@ const BookList = ({ bookDesigns }: BookListProps) => {
   const [selectedBook, setSelectedBook] = useState<BookDesign | null>(null);
 
   const openModal = (book: BookDesign) => {
-    setSelectedBook(book);
-    setModalOpen(true);
+    const img = new Image();
+    img.src = book.featuredImage.url;
+    img.onload = () => {
+      setSelectedBook(book);
+      setModalOpen(true);
+    };
   };
 
   const closeModal = () => {
@@ -41,11 +44,11 @@ const BookList = ({ bookDesigns }: BookListProps) => {
           onClick={() => openModal(bookDesign)}
         >
           <div className="book-cover-container">
-            <Image
+            <img
               alt={bookDesign.title}
               className="book-cover"
               height="600"
-              src={bookDesign.thumbnail.url}
+              src={bookDesign.featuredImage.url}
               width="400"
             />
           </div>
@@ -57,8 +60,11 @@ const BookList = ({ bookDesigns }: BookListProps) => {
         <Modal
           isOpen={isModalOpen}
           onClose={closeModal}
-          bookCoverUrl={selectedBook.thumbnail.url}
-          bookTitle={selectedBook.title}
+          gallery={
+            selectedBook.galleryCollection.items.length > 0
+              ? selectedBook.galleryCollection.items
+              : [selectedBook.featuredImage]
+          }
         />
       )}
     </div>
