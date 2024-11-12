@@ -166,6 +166,61 @@ const Navbar = () => {
           <Image src={hamburger} alt="menu" width="60" height="60"></Image>
         </div>
 
+        {isHamburgerDropdownVisible && (
+          <div ref={hamburgerDropdownRef}>
+            <ul className="dropdown-menu main-font">
+              <li className="dropdown-menu-item">
+                <Link href="/about" onClick={closeHamburgerDropdown}>
+                  <div className="item">
+                    <p>ABOUT</p>
+                    <Image
+                      className={`menu-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
+                </Link>
+              </li>
+              <li className="dropdown-menu-item">
+                <Link href="/about/#contact" onClick={closeHamburgerDropdown}>
+                  <div className="item">
+                    <p>CONTACT</p>
+                    <Image
+                      className={`menu-arrow`}
+                      src={Arrow}
+                      alt="Arrow"
+                      width={15}
+                      height={15}
+                    ></Image>
+                  </div>
+                </Link>
+              </li>
+              <li className="dropdown-menu-item">
+                <Link href="/portfolio" onClick={closeHamburgerDropdown}>
+                  <div className="item">
+                    <p>PORTFOLIO</p>
+                    <div
+                      // className="portfolio-menu-icon"
+                      onClick={togglePortfolioDropdown}
+                      ref={portfolioRef}
+                    >
+                      <Image
+                        className={`menu-arrow-down`}
+                        src={dropdown}
+                        alt="portfolio menu"
+                        width={15}
+                        height={15}
+                      ></Image>
+                    </div>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+
         {isPortfolioDropdownVisible && (
           <div ref={portfolioDropdownRef}>
             <ul className="dropdown-menu main-font">
@@ -177,7 +232,7 @@ const Navbar = () => {
                   <div className="item">
                     <p>ILLUSTRATIONS</p>
                     <Image
-                      className={`carousel-arrow`}
+                      className={`menu-arrow`}
                       src={Arrow}
                       alt="Arrow"
                       width={15}
@@ -194,7 +249,7 @@ const Navbar = () => {
                   <div className="item">
                     <p>FINE ART</p>
                     <Image
-                      className={`carousel-arrow`}
+                      className={`menu-arrow`}
                       src={Arrow}
                       alt="Arrow"
                       width={15}
@@ -211,7 +266,7 @@ const Navbar = () => {
                   <div className="item">
                     <p>GRAPHIC DESIGNS</p>
                     <Image
-                      className={`carousel-arrow`}
+                      className={`menu-arrow`}
                       src={Arrow}
                       alt="Arrow"
                       width={15}
@@ -225,35 +280,13 @@ const Navbar = () => {
                   <div className="item">
                     <p>COVER DESIGN</p>
                     <Image
-                      className={`carousel-arrow`}
+                      className={`menu-arrow`}
                       src={Arrow}
                       alt="Arrow"
                       width={15}
                       height={15}
                     ></Image>
                   </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
-        )}
-
-        {isHamburgerDropdownVisible && (
-          <div ref={hamburgerDropdownRef}>
-            <ul className="dropdown-menu main-font">
-              <li className="dropdown-menu-item">
-                <Link href="/about" onClick={closeHamburgerDropdown}>
-                  <p>ABOUT</p>
-                </Link>
-              </li>
-              <li className="dropdown-menu-item">
-                <Link href="/about/#contact" onClick={closeHamburgerDropdown}>
-                  <p>CONTACT</p>
-                </Link>
-              </li>
-              <li className="dropdown-menu-item">
-                <Link href="/portfolio" onClick={closeHamburgerDropdown}>
-                  <p>PORTFOLIO</p>
                 </Link>
               </li>
             </ul>

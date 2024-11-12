@@ -113,6 +113,7 @@ body {
   flex-direction: row;
   align-items: center;
   height: 40px;
+  gap: 7px;
 }
 
 .spacer {
@@ -121,12 +122,11 @@ body {
 
 .portfolio-menu-icon {
   cursor: pointer;
-  margin-bottom: 2px;
 }
 
 .portfolio-menu-icon img {
-  height: 40px !important;
-  width: 40px !important;
+  height: 12px !important;
+  width: auto !important;
 }
 
 .hamburger-menu-icon {
@@ -609,12 +609,12 @@ main {
 /* Modal content */
 .modal-content {
   background: white;
-  padding: 20px 50px;
+  padding: 50px;
   border-radius: 4px;
   position: relative;
-  width: 50vw;
+  width: auto;
   max-width: 90%;
-  height: 95vh;
+  height: auto;
   max-height: 95%;
   display: flex;
   justify-content: center;
@@ -697,6 +697,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
 .slider-thumbnail {
@@ -713,6 +715,19 @@ main {
 .carousel-arrow {
   width: auto;
   height: 15px;
+  cursor: pointer;
+}
+
+.menu-arrow {
+  width: auto;
+  height: 15px;
+  cursor: pointer;
+  padding-right: 2px;
+}
+
+.menu-arrow-down {
+  width: auto;
+  height: 12px;
   cursor: pointer;
 }
 
@@ -864,9 +879,6 @@ main {
   }
   .dropdown-menu {
     right: 25px;
-  }
-  .modal-content {
-    height: unset;
   }
   .portfolio-heading {
     font-size: 28px;
