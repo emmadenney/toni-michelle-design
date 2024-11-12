@@ -15,8 +15,6 @@ interface ModalProps {
 const Modal = ({ isOpen, onClose, gallery }: ModalProps) => {
   if (!isOpen) return null;
 
-  console.log("gallery: ", gallery);
-
   const NextArrow = (props: any) => {
     const { className, style, onClick } = props;
     return (
