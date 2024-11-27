@@ -49,7 +49,6 @@ const Modal = ({ isOpen, onClose, gallery }: ModalProps) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     initialSlide: 0,
-    className: "slider-inner-div",
     nextArrow: gallery.length > 1 ? <NextArrow /> : undefined,
     prevArrow: gallery.length > 1 ? <PrevArrow /> : undefined,
   };

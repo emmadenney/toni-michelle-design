@@ -612,17 +612,18 @@ main {
   padding: 50px;
   border-radius: 4px;
   position: relative;
-  width: 90vw;
-  max-width: 90%;
-  max-height: 90%;
+  width: 80vw;
+  /* max-width: 90%; */
+  /* max-height: 90%; */
   height: 90vh;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-wrapper {
-  flex: 1;
+  overflow: auto;
+  width: 100%;
 }
 
 /* Close button */
@@ -638,18 +639,30 @@ main {
 .modal-slider-container {
   max-width: 100%;
   height: 100%;
+  padding: 30px;
 }
 
 .modal-slider-thumbnail {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: calc(80vw - 140px);
+  max-height: calc(90vh - 124px);
   width: auto;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   padding: 12px;
   padding-left: 20px;
   padding-right: 20px;
+  margin: 0 auto;
   /* filter: drop-shadow(9px 9px 10px rgba(0, 0, 0, 0.2)); */
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.slick-slide div div {
+  display: flex !important;
+  justify-content: center;
 }
 
 /* Darken the background when the modal is open */
@@ -699,12 +712,6 @@ main {
 .slider-container {
   width: 100%;
   height: 100%;
-}
-
-.slider-inner-div {
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 .slider-thumbnail {
