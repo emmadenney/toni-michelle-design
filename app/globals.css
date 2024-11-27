@@ -612,13 +612,17 @@ main {
   padding: 50px;
   border-radius: 4px;
   position: relative;
-  width: auto;
+  width: 90vw;
   max-width: 90%;
-  height: auto;
-  max-height: 95%;
+  max-height: 90%;
+  height: 90vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.modal-wrapper {
+  flex: 1;
 }
 
 /* Close button */
@@ -626,16 +630,21 @@ main {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 24px;
+  font-size: 32px;
   cursor: pointer;
   color: #6f4568;
+}
+
+.modal-slider-container {
+  max-width: 100%;
+  height: 100%;
 }
 
 .modal-slider-thumbnail {
   max-width: 100%;
   max-height: 100%;
   width: auto;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   padding: 12px;
   padding-left: 20px;
@@ -687,18 +696,15 @@ main {
   padding: 30px;
 }
 
-.slider-container,
-.modal-slider-container {
-  max-width: 100%;
-  max-height: 100%;
+.slider-container {
+  width: 100%;
+  height: 100%;
 }
 
 .slider-inner-div {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .slider-thumbnail {

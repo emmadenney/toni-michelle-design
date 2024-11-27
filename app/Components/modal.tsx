@@ -60,14 +60,16 @@ const Modal = ({ isOpen, onClose, gallery }: ModalProps) => {
         <span className="modal-close" onClick={onClose}>
           &times;
         </span>
-        <div className="modal-slider-container">
-          <Slider {...settings}>
-            {gallery.map((image, index) => (
-              <div key={index}>
-                <img className="modal-slider-thumbnail" src={image.url} />
-              </div>
-            ))}
-          </Slider>
+        <div className="modal-wrapper">
+          <div className="modal-slider-container">
+            <Slider {...settings}>
+              {gallery.map((image, index) => (
+                <div key={index}>
+                  <img className="modal-slider-thumbnail" src={image.url} />
+                </div>
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </div>
