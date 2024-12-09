@@ -551,6 +551,13 @@ main {
   background-color: #6f4568 !important;
 }
 
+.contact-form-item input:disabled,
+.contact-form-item textarea:disabled {
+  background-color: #f0f0f0; /* Light grey */
+  color: #888; /* Grey text */
+  cursor: not-allowed; /* Change cursor to indicate it's disabled */
+}
+
 .button-container {
   display: flex;
   justify-content: center;
@@ -612,7 +619,7 @@ main {
   padding: 50px;
   border-radius: 4px;
   position: relative;
-  width: 80vw;
+  width: 60vw;
   /* max-width: 90%; */
   /* max-height: 90%; */
   height: 90vh;
@@ -643,7 +650,7 @@ main {
 }
 
 .modal-slider-thumbnail {
-  max-width: calc(80vw - 140px);
+  max-width: calc(60vw - 140px);
   max-height: calc(90vh - 124px);
   width: auto;
   height: auto;
