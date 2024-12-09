@@ -7,9 +7,11 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState("");
+  const [fieldsDisabled, setFieldsDisabled] = useState(false);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setFieldsDisabled(true);
     setStatus("Sending...");
     const formData = {
       name,
@@ -40,11 +42,16 @@ export default function ContactForm() {
       }
     } catch (error) {
       setStatus("Error sending email.");
+    } finally {
+      setName("");
+      setEmail("");
+      setMessage("");
+      setFieldsDisabled(false);
     }
   };
 
   return (
-    <form className="contact-form" onSubmit={handleSubmit}>
+    <form className="contact-form" id="contact-form" onSubmit={handleSubmit}>
       <div className="contact-form-item">
         <label htmlFor="contact-form-name" className="main-font">
           Name
@@ -58,6 +65,8 @@ export default function ContactForm() {
           onChange={(e) => {
             setName(e.target.value);
           }}
+          disabled={fieldsDisabled}
+          required
         ></input>
       </div>
       <div className="contact-form-item">
@@ -73,6 +82,8 @@ export default function ContactForm() {
           onChange={(e) => {
             setEmail(e.target.value);
           }}
+          disabled={fieldsDisabled}
+          required
         ></input>
       </div>
       <div className="contact-form-item">
@@ -87,6 +98,8 @@ export default function ContactForm() {
           onChange={(e) => {
             setMessage(e.target.value);
           }}
+          disabled={fieldsDisabled}
+          required
         ></textarea>
       </div>
       <div className="button-container">
